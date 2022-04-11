@@ -1,0 +1,96 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#btnAnimationStart{
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    box-shadow: 3px 2px 6px rgb(150, 78, 78);
+    color: white;
+    background-color: rgb(150, 78, 78);
+    cursor:pointer;
+    transition: all 0.14s;
+    z-index: 999;
+}
+#btnAnimationStart:hover{
+    box-shadow: 4px 4px 6px rgb(150, 78, 78);
+    transform: scale(1.05);
+}
+#btnAnimationStart:active{
+    box-shadow: 1px 1px 3px rgb(150, 78, 78);
+    transform: scale(1);
+}
+
+#btnAnimationStop{
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    box-shadow: 3px 2px 6px rgb(150, 78, 78);
+    color: white;
+    background-color: rgb(78, 91, 150);
+    cursor:pointer;
+    transition: all 0.14s;
+    z-index: 999;
+}
+#btnAnimationStop:hover{
+    box-shadow: 4px 4px 6px rgb(150, 78, 78);
+    transform: scale(1.05);
+}
+#btnAnimationStop:active{
+    box-shadow: 1px 1px 3px rgb(150, 78, 78);
+    transform: scale(1);
+}
+
+
+.Element{
+    width:0;
+    height:0;
+    border-radius: 50%;
+    position: absolute;
+}
+
+@keyframes circleExpand {
+    to{
+        width:2600px;
+        height:2600px;
+    }
+}
+
+@keyframes circleContract {
+    0%{
+        width:0px;
+        height:0px;
+    }
+
+    50%{
+        width:2600px;
+        height:2600px;
+    }
+
+    100%{
+        width:0px;
+        height:0px;
+    }
+
+}
